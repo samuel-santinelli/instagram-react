@@ -41,6 +41,7 @@ const Card = ({title, location, imageUri, text, like}) => {
 
         <Image style={styleContent.icons} source={bookmarkOutline} />
       </View>
+      <View style={styleContent.separator} />
     </View>
   );
 };
@@ -83,6 +84,10 @@ export const styleContent = StyleSheet.create({
   image: {
     width: '100%',
     height: 300,
+  },
+  separator: {
+    height: 10,
+    backgroundColor: '#000',
   },
 });
 

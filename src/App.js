@@ -37,6 +37,7 @@ const App = () => (
           text={item.text}
           image={item.imageUri}
           location={item.location}
+          separator={item.separator}
         />
       )}
     />
