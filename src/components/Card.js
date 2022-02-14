@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import iconButton from './iconButton';
+import style from '../style';
+import IconButton from './IconButton';
 
-const heartOutline = require('./heart-outline.png');
-const heartSolid = require('../../assets/icons/heart-outline.png');
-const bookmarkOutline = require('../../assets/icons/save-icon.png');
-const bookmarkSolid = require('../../assets/icons/save-icon.png');
+const heartOutline = require('../assets/heart-outline.png');
+const heartSolid = require('../assets/heart-solid.png');
+const bookmarkOutline = require('../assets/save-icon.png');
+const bookmarkSolid = require('../assets/save-iconSolid.png');
 
-const Card = ({title, location, imageUri, text, like}) => {
+const Card = ({title, location, imageUri, text}) => {
   const handleImageTouch = cardTitle => {
     console.log('imagem pressionada: ', cardTitle);
   };
@@ -24,24 +25,26 @@ const Card = ({title, location, imageUri, text, like}) => {
     setBookmarked(!bookmarked);
   };
 
+  console.log(imageUri);
+
   return (
     <View style={styleContent.content}>
+      <View style={styleContent.separator} />
       <Text style={styleContent.title}>{title}</Text>
       <Text style={styleContent.subtitle}>{location}</Text>
       <TouchableOpacity onPress={() => handleImageTouch(title)}>
-        <Image source={{uri: imageUri}} />
+        <Image style={styleContent.image} source={{uri: imageUri}} />
       </TouchableOpacity>
       <Text style={styleContent.container}> {text}</Text>
-      <View style={styleContent.ContentIcons}>
-        <iconButton iconChecked={heartSolid} iconUnchecked={heartOutline} />
-        <iconButton
+      <View style={styleContent.contentIcons}>
+        <IconButton iconChecked={heartSolid} iconUnchecked={heartOutline} />
+        <IconButton
           iconChecked={bookmarkSolid}
           iconUnchecked={bookmarkOutline}
         />
 
-        <Image style={styleContent.icons} source={bookmarkOutline} />
+        <Image style={style.icons} source={bookmarkOutline} />
       </View>
-      <View style={styleContent.separator} />
     </View>
   );
 };
@@ -50,9 +53,9 @@ export default Card;
 
 export const styleContent = StyleSheet.create({
   content: {
-    backgroundColor: '#000',
+    backgroundColor: '#ffffff',
   },
-  ContentIcons: {
+  contentIcons: {
     flexDirection: 'row',
     marginVertical: 5,
   },
@@ -63,22 +66,24 @@ export const styleContent = StyleSheet.create({
 
   container: {
     fontFamily: 'verdana',
-    color: '#fff',
-    marginLeft: 6,
+    color: '#000',
+    marginLeft: 4,
     fontSize: 13,
+    fontWeight: '500',
+    marginTop: 4,
   },
   title: {
     fontFamily: 'verdana',
     fontWeight: 'bold',
-    color: '#fff',
+    color: '#000',
     marginLeft: 6,
     fontSize: 24,
     marginTop: 16,
   },
   subtitle: {
     fontFamily: 'verdana',
-    color: '#d3d3d3',
-    fontSize: 12,
+    color: '#000',
+    fontSize: 11,
     marginLeft: 8,
   },
   image: {
@@ -86,7 +91,8 @@ export const styleContent = StyleSheet.create({
     height: 300,
   },
   separator: {
-    height: 10,
+    marginTop: 1,
+    height: 1,
     backgroundColor: '#000',
   },
 });

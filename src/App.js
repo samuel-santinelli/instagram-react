@@ -8,14 +8,14 @@ const userData = [
     location: 'Osasco',
     text: 'Se café é bom? um belo dia começa com um golé de café!',
     imageUri:
-      'https://ichef.bbci.co.uk/news/640/cpsprodpb/1615F/production/_108236409_gettyimages-1094812112.jpg',
+      'https://i.pinimg.com/originals/74/9d/d6/749dd621b718e5936b60d58e7ae4af26.jpg',
   },
   {
     title: 'Kevin Silva',
     location: 'Itapevi SP',
     text: 'Uma reunião de amigos, pára matar a saudade obs: eles que pagaram a conta rsrsrs',
     imageUri:
-      'https://ichef.bbci.co.uk/news/640/cpsprodpb/1615F/production/_108236409_gettyimages-1094812112.jpg',
+      'https://love.doghero.com.br/wp-content/uploads/2018/08/husky-siberiano-2.png',
   },
 
   {
@@ -35,7 +35,7 @@ const App = () => (
         <Card
           title={item.title}
           text={item.text}
-          image={item.imageUri}
+          imageUri={item.imageUri}
           location={item.location}
           separator={item.separator}
         />

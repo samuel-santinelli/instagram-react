@@ -1,35 +1,43 @@
-import {StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {TouchableOpacity, Image} from 'react-native';
 import React, {useState} from 'react';
+import style from '../style';
 
-const iconButton = ({iconChecked, iconUnchecked}) => {
-  const [checked, setChecked] = useState(false);
+const IconButton = ({iconChecked, iconUnchecked}) => {
+  const retorno = useState(false);
 
-  const handleChecked = () => {
-    setChecked(!checked);
-  };
+  // O useState retorna um array que no indice 0 possui o valor do estado e no indice 1 possui uma função para alterar o estado
+
+  const pressionado = retorno[0];
+
+  const pressionadoN = retorno[1];
+
+  function trocaPressionado() {
+    if (pressionado === true) {
+      pressionadoN(false);
+    } else {
+      pressionadoN(true);
+    }
+  }
+
+  // let pressionado = false;
+
+  // function trocaValorPressionado() {
+  //   if (pressionado === true) {
+  //     pressionado = false;
+  //   } else {
+  //     pressionado = true;
+  //   }
+  //   console.log(pressionado);
+  // }
 
   return (
-    <TouchableOpacity onPress={handleChecked}>
+    <TouchableOpacity onPress={trocaPressionado}>
       <Image
-        style={styleContent.icons}
-        source={iconChecked ? iconUnchecked : bookmarkOutline}
+        style={style.icons}
+        source={pressionado === true ? iconChecked : iconUnchecked}
       />
     </TouchableOpacity>
   );
 };
 
-export default iconButton;
-
-export const styleContent = StyleSheet.create({
-  content: {
-    backgroundColor: '#000',
-  },
-  ContentIcons: {
-    flexDirection: 'row',
-    marginVertical: 5,
-  },
-
-  icons: {
-    marginRight: 3,
-  },
-});
+export default IconButton;
