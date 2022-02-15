@@ -6,16 +6,16 @@ const userData = [
   {
     title: 'João Peregrino',
     location: 'Osasco',
-    text: 'Se café é bom? um belo dia começa com um golé de café!',
+    text: 'Um belo dia começa com um golé de café!',
     imageUri:
-      'https://i.pinimg.com/originals/74/9d/d6/749dd621b718e5936b60d58e7ae4af26.jpg',
+      'https://www.queroviverbem.com.br/wp-content/uploads/2017/01/tomando-cafe-diariamente.jpg',
   },
   {
     title: 'Kevin Silva',
     location: 'Itapevi SP',
     text: 'Uma reunião de amigos, pára matar a saudade obs: eles que pagaram a conta rsrsrs',
     imageUri:
-      'https://love.doghero.com.br/wp-content/uploads/2018/08/husky-siberiano-2.png',
+      'https://processohoffman.pt/images/blog/pessoas-fechadas-voce-nao-consegue-se-abrir-e-relacionar-com-os-outros.jpg',
   },
 
   {
@@ -23,7 +23,7 @@ const userData = [
     location: 'Jandira',
     text: 'A vista daqui é incrivel! porém prefiro a vista da minha cidadezinha em Itapevi!!',
     imageUri:
-      'https://ichef.bbci.co.uk/news/640/cpsprodpb/1615F/production/_108236409_gettyimages-1094812112.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtdUQUhlDjdlsNlElQcqV7-ruvsVY40Z6RuQ&usqp=CAU',
   },
 ];
 

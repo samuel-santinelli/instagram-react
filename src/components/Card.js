@@ -3,26 +3,14 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import style from '../style';
 import IconButton from './IconButton';
 
-const heartOutline = require('../assets/heart-outline.png');
-const heartSolid = require('../assets/heart-solid.png');
+const heartOutline = require('../assets/heartSolid.png');
+const heartSolid = require('../assets/heartSolidOutline.png');
 const bookmarkOutline = require('../assets/save-icon.png');
-const bookmarkSolid = require('../assets/save-iconSolid.png');
+const bookmarkSolid = require('../assets/save-iconOutline.png');
 
 const Card = ({title, location, imageUri, text}) => {
   const handleImageTouch = cardTitle => {
     console.log('imagem pressionada: ', cardTitle);
-  };
-
-  const [liked, setLiked] = useState(false); // [0] valor corrente, [1] função modificadora
-  const [bookmarked, setBookmarked] = useState(false); // [0] valor corrente, [1] função modificadora
-
-  // Provocando uma reação
-  const handleLike = () => {
-    setLiked(!liked);
-  };
-
-  const handleBookmarked = () => {
-    setBookmarked(!bookmarked);
   };
 
   console.log(imageUri);
@@ -42,8 +30,6 @@ const Card = ({title, location, imageUri, text}) => {
           iconChecked={bookmarkSolid}
           iconUnchecked={bookmarkOutline}
         />
-
-        <Image style={style.icons} source={bookmarkOutline} />
       </View>
     </View>
   );
@@ -83,7 +69,7 @@ export const styleContent = StyleSheet.create({
   subtitle: {
     fontFamily: 'verdana',
     color: '#000',
-    fontSize: 11,
+    fontSize: 12,
     marginLeft: 8,
   },
   image: {
@@ -96,6 +82,9 @@ export const styleContent = StyleSheet.create({
     backgroundColor: '#000',
   },
 });
+
+// const [liked, setLiked] = useState(false); // [0] valor corrente, [1] função modificadora
+// const [bookmarked, setBookmarked] = useState(false); // [0] valor corrente, [1] função modificadora
 
 // const style = StyleSheet.create({
 //   cardView: {
@@ -116,3 +105,12 @@ export const styleContent = StyleSheet.create({
 // }
 // liked = liked ? false : true;
 // }
+
+// Provocando uma reação
+// const handleLike = () => {
+//   setLiked(!liked);
+// };
+
+// const handleBookmarked = () => {
+//   setBookmarked(!bookmarked);
+// };
