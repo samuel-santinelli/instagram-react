@@ -1,50 +1,17 @@
 import React from 'react';
-import Card from './components/Card';
-import {FlatList, SafeAreaView} from 'react-native';
-
-const userData = [
-  {
-    title: 'João Peregrino',
-    location: 'Osasco',
-    text: 'Um belo dia começa com um golé de café!',
-    imageUri:
-      'https://www.queroviverbem.com.br/wp-content/uploads/2017/01/tomando-cafe-diariamente.jpg',
-  },
-  {
-    title: 'Kevin Silva',
-    location: 'Itapevi SP',
-    text: 'Uma reunião de amigos, pára matar a saudade obs: eles que pagaram a conta rsrsrs',
-    imageUri:
-      'https://processohoffman.pt/images/blog/pessoas-fechadas-voce-nao-consegue-se-abrir-e-relacionar-com-os-outros.jpg',
-  },
-
-  {
-    title: 'Carol Ferreira',
-    location: 'Jandira',
-    text: 'A vista daqui é incrivel! porém prefiro a vista da minha cidadezinha em Itapevi!!',
-    imageUri:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtdUQUhlDjdlsNlElQcqV7-ruvsVY40Z6RuQ&usqp=CAU',
-  },
-];
+import {FlatList, SafeAreaView, Text} from 'react-native';
+import Feed from './components/Feed';
 
 const App = () => (
-  <SafeAreaView>
-    <FlatList
-      data={userData}
-      renderItem={({item}) => (
-        <Card
-          title={item.title}
-          text={item.text}
-          imageUri={item.imageUri}
-          location={item.location}
-          separator={item.separator}
-        />
-      )}
-    />
-  </SafeAreaView>
+  // <SafeAreaView>
+  //   <Feed></Feed>
+  // </SafeAreaView>
+  <Feed />
 );
 
 export default App;
+
+// const styles = StyleSheet.create({});
 
 /* <View style={styleContent.content}>
       <View style={styleLogo.logo}>

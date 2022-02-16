@@ -23,6 +23,10 @@ const IconButton = ({iconChecked, iconUnchecked}) => {
 
 export default IconButton;
 
+// const [checked, setChecked] = useState(checked);
+// setChecked(!state);
+// checked={iconLike}
+
 // const pressionado = retorno[0];
 
 // const pressionadoN = retorno[1];
