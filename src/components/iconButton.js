@@ -4,19 +4,17 @@ import style from '../style';
 
 // O useState retorna um array que no indice 0 possui o valor do estado e no indice 1 possui uma função para alterar o estado
 
-const IconButton = ({iconChecked, iconUnchecked}) => {
-  const [checked, setChecked] = useState(false);
+const IconButton = ({iconChecked, iconUnchecked, onChange, checked}) => {
+  const [state, setState] = useState(checked);
 
   const handleChecked = () => {
-    setChecked(!checked);
+    onChange(!state);
+    setState(!state);
   };
 
   return (
     <TouchableOpacity onPress={handleChecked}>
-      <Image
-        style={style.icons}
-        source={checked ? iconChecked : iconUnchecked}
-      />
+      <Image style={style.icons} source={state ? iconChecked : iconUnchecked} />
     </TouchableOpacity>
   );
 };
