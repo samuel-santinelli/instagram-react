@@ -24,18 +24,23 @@ const Card = ({
   const [iconLike, setIconLike] = useState(false);
   const [iconSave, setIconSave] = useState(false);
 
-  console.log(iconLike, iconSave);
+  console.log(
+    '( O state do heartState encontra-se: ',
+    iconLike,
+    ' ) e o state do saveState encontra-se: ',
+    iconSave,
+  );
 
   return (
     <View style={style.content}>
-      <Text style={style.title}>{title}</Text>
-      <Text style={style.subtitle}>{location}</Text>
       <TouchableOpacity
         style={style.contentProfile}
         onPress={() => handleImageTouch(title)}>
         <Image style={style.profile} source={{uri: fotoProfile}} />
         <Text style={style.name}>{nameProfile}</Text>
       </TouchableOpacity>
+      <Text style={style.location}>{location}</Text>
+
       <Image style={style.image} source={{uri: imageUri}} />
 
       <Text style={style.likes}>{likes}</Text>
@@ -49,12 +54,14 @@ const Card = ({
           onChange={setIconLike}
           iconChecked={heartOutline}
           iconUnchecked={heartSolid}
+          // iconState={iconState.heart}
         />
         <IconButton
           checked={iconSave}
           onChange={setIconSave}
           iconChecked={SaveSolid}
           iconUnchecked={SaveOutline}
+          // iconState={iconState.bookmark}
         />
       </View>
       <View style={style.separator} />
@@ -63,6 +70,26 @@ const Card = ({
 };
 
 export default Card;
+
+// const [iconState, setIconState] = useState({heart: false, bookmark: false});
+
+// function handleIconState(state) {
+//   console.log('heart: ', state);
+//   const obj = {...iconState};
+// obj[icon] = state;
+// setIconState(obj);
+// }
+
+// const handleChecked = () => {
+// const newState = {icon: iconName, state: !checked.state};
+// setChecked(newState);
+// onPress(state => handleIconState('heart', state))
+//}
+
+// iconName="heart"
+// iconName="bookmark"
+// onPress={handelIconState}
+// iconState={handelIconState}
 
 // onChange={b => setIcons({...icons, like: like })}
 // const state = icons;
@@ -75,7 +102,7 @@ export default Card;
 // console.log(imageUri);
 
 // const [liked, setLiked] = useState(false); // [0] valor corrente, [1] função modificadora
-// const [Saveed, setSaveed] = useState(false); // [0] valor corrente, [1] função modificadora
+// const [Saved, setSaved] = useState(false); // [0] valor corrente, [1] função modificadora
 
 // const style = StyleSheet.create({
 //   cardView: {
@@ -102,6 +129,6 @@ export default Card;
 //   setLiked(!liked);
 // };
 
-// const handleSaveed = () => {
-//   setSaveed(!Saveed);
+// const handleSaved = () => {
+//   setSaved(!Saved);
 // };

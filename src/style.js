@@ -20,14 +20,13 @@ const style = StyleSheet.create({
     height: 35,
     width: 35,
     borderRadius: 50,
-    marginBottom: 5,
+    marginTop: 10,
   },
   name: {
     color: '#fff',
-    fontSize: 16,
-    fontFamily: 'verdana',
-    marginTop: 5,
-    marginLeft: 5,
+    fontSize: 17,
+    marginTop: 14,
+    marginLeft: 7,
     fontWeight: 'bold',
   },
   content: {
@@ -39,7 +38,6 @@ const style = StyleSheet.create({
     marginVertical: 5,
   },
   container: {
-    fontFamily: 'verdana',
     color: '#fff',
     marginLeft: 4,
     fontSize: 15,
@@ -47,15 +45,13 @@ const style = StyleSheet.create({
     marginTop: 1,
   },
   title: {
-    fontFamily: 'verdana',
     fontWeight: 'bold',
     color: '#fff',
-    marginLeft: 6,
-    fontSize: 28,
-    marginTop: 6,
+    fontSize: 26,
+    textAlign: 'center',
+    marginTop: 5,
   },
   subtitle: {
-    fontFamily: 'verdana',
     color: '#fff',
     fontSize: 14,
     marginLeft: 8,
@@ -76,6 +72,12 @@ const style = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 6,
     marginTop: 4,
+  },
+  location: {
+    color: '#fff',
+    fontSize: 14,
+    marginLeft: 42,
+    marginBottom: 10,
   },
 });
 
