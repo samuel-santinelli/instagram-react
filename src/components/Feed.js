@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, FlatList} from 'react-native';
 import Card from './Card';
+import SuperCard from './SuperCard';
 
 const qtdLikes = 765;
 const nomeLikes = ['joão16', ' maria_tks', ' joséPedrin'];
@@ -47,16 +48,9 @@ const Feed = () => {
       <FlatList
         data={userData}
         renderItem={({item}) => (
-          <Card
-            fotoProfile={item.fotoProfile}
-            nameProfile={item.nameProfile}
-            location={item.location}
-            title={item.title}
-            text={item.text}
-            imageUri={item.imageUri}
-            likes={item.likes}
-            separator={item.separator}
-          />
+          <SuperCard>
+            <Card {...item} />
+          </SuperCard>
         )}
       />
     </View>

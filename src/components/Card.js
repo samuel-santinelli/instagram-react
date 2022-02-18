@@ -41,7 +41,7 @@ const Card = ({
       </TouchableOpacity>
       <Text style={style.location}>{location}</Text>
 
-      <Image style={style.image} source={{uri: imageUri}} />
+      {/* <Image style={style.image} source={{uri: imageUri}} /> */}
 
       <Text style={style.likes}>{likes}</Text>
       <Text style={style.container}> {text}</Text>

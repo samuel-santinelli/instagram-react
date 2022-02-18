@@ -1,5 +1,4 @@
 import React from 'react';
-import {FlatList, SafeAreaView, Text} from 'react-native';
 import Feed from './components/Feed';
 
 const App = () => (
